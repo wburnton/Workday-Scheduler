@@ -28,26 +28,25 @@ function timeBlock () {
 // WHEN I click the save button for that timeblock
 // THEN the text for that event is saved in local storage 
 $('.saveBtn').on('click', function () {
-    // get nearby values of the description in jQuery
-    var textValue = $(this).siblings('.description').val();
-    // get the id attribute of the parent div element
+    var scheduleInput = $(this).siblings('.description').val();
     var timeKey = $(this).parent().attr('id');
+    localStorage.setItem(timeKey, scheduleInput);
+    });
+    
+    
+
   
-    // save in local storage
-    localStorage.setItem(timeKey, textValue);
-  });
   
-  // Get item from local storage if any
   $('#hour8 .description').val(localStorage.getItem('hour8'));
   $('#hour9 .description').val(localStorage.getItem('hour9'));
   $('#hour10 .description').val(localStorage.getItem('hour10'));
   $('#hour11 .description').val(localStorage.getItem('hour11'));
   $('#hour12 .description').val(localStorage.getItem('hour12'));
-  $('#hour13 .description').val(localStorage.getItem('hour1'));
-  $('#hour14 .description').val(localStorage.getItem('hour2'));
-  $('#hour15 .description').val(localStorage.getItem('hour3'));
-  $('#hour16 .description').val(localStorage.getItem('hour4'));
-  $('#hour17 .description').val(localStorage.getItem('hour5'));
+  $('#hour1 .description').val(localStorage.getItem('hour1'));
+  $('#hour2 .description').val(localStorage.getItem('hour2'));
+  $('#hour3 .description').val(localStorage.getItem('hour3'));
+  $('#hour4 .description').val(localStorage.getItem('hour4'));
+  $('#hour5 .description').val(localStorage.getItem('hour5'));
 // WHEN I refresh the page
 // THEN the saved events persist
 timeBlock();
