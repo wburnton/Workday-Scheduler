@@ -12,7 +12,7 @@ Using dayjs(), the timeblock is color coded based on the current hour.
 https://github.com/wburnton/Workday-Scheduler/  
 https://wburnton.github.io/Workday-Scheduler/
 
-![alt text](assets/screenshot.png)
+![alt text](/Assets/screenshot.png)
 
 # License 
 
